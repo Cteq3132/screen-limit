@@ -43,7 +43,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '1071299133185',
     projectId: 'screen-limit-8e771',
     authDomain: 'screen-limit-8e771.firebaseapp.com',
-    databaseURL: 'https://screen-limit-8e771-default-rtdb.europe-west1.firebasedatabase.app',
+    databaseURL:
+        'https://screen-limit-8e771-default-rtdb.europe-west1.firebasedatabase.app',
     storageBucket: 'screen-limit-8e771.appspot.com',
     measurementId: 'G-X2S6FZE0RT',
   );
@@ -53,7 +54,8 @@ class DefaultFirebaseOptions {
     appId: '1:1071299133185:android:c98aa5170f5db3efc36500',
     messagingSenderId: '1071299133185',
     projectId: 'screen-limit-8e771',
-    databaseURL: 'https://screen-limit-8e771-default-rtdb.europe-west1.firebasedatabase.app',
+    databaseURL:
+        'https://screen-limit-8e771-default-rtdb.europe-west1.firebasedatabase.app',
     storageBucket: 'screen-limit-8e771.appspot.com',
   );
 
@@ -62,9 +64,23 @@ class DefaultFirebaseOptions {
     appId: '1:1071299133185:ios:ecbe23bf00a9becac36500',
     messagingSenderId: '1071299133185',
     projectId: 'screen-limit-8e771',
-    databaseURL: 'https://screen-limit-8e771-default-rtdb.europe-west1.firebasedatabase.app',
+    databaseURL:
+        'https://screen-limit-8e771-default-rtdb.europe-west1.firebasedatabase.app',
     storageBucket: 'screen-limit-8e771.appspot.com',
-    iosClientId: '1071299133185-8odc17i5ulohvggn0ffvlddbressuupt.apps.googleusercontent.com',
+    iosClientId:
+        '1071299133185-8odc17i5ulohvggn0ffvlddbressuupt.apps.googleusercontent.com',
     iosBundleId: 'fr.dachet.screenlimit',
   );
+
+  // static const FirebaseOptions ios = FirebaseOptions(
+  //   apiKey: 'apiKey',
+  //   appId: 'appId',
+  //   messagingSenderId: 'messagingSenderId',
+  //   projectId: 'projectId',
+  //   databaseURL: 'https://screen-limit-8e771-default-rtdb.europe-west1.firebasedatabase.app',
+  //   storageBucket: 'storageBucket',
+  //   iosClientId: 'iosClientId',
+  //   iosBundleId: 'iosBundleId',
+  // );
+
 }

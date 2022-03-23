@@ -1,26 +1,21 @@
-import 'package:flutter/material.dart';
+import 'package:authentication_repository/authentication_repository.dart';
+import 'package:bloc/bloc.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'firebase_options.dart';
+import 'package:flutter/widgets.dart';
+import 'package:screen_limit/app/app.dart';
+import 'package:screen_limit/firebase_options.dart';
 
 Future<void> main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
+  return BlocOverrides.runZoned(
+    () async {
+      WidgetsFlutterBinding.ensureInitialized();
+      await Firebase.initializeApp(
+        options: DefaultFirebaseOptions.currentPlatform,
+      );
+      final authenticationRepository = AuthenticationRepository();
+      await authenticationRepository.user.first;
+      runApp(App(authenticationRepository: authenticationRepository));
+    },
+    blocObserver: AppBlocObserver(),
   );
-  runApp(const ScreenLimitApp());
-}
-
-class ScreenLimitApp extends StatelessWidget {
-  const ScreenLimitApp({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Screen Limit App',
-      theme: ThemeData(primarySwatch: Colors.purple),
-      home: Scaffold(
-        body: Container(),
-      ),
-    );
-  }
 }
