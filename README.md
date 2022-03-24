@@ -1,16 +1,14 @@
-# screen_limit
+# Screen Limit app
 
-A new Flutter project.
+A project to show how to prevent simultaneous login of the same user using Firebase Realtime Database and Flutter.
+
+![](demo.gif)
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+Clone this repository and run `flutter run`.
+Create an account and test to log in on more than 2 devices, you should get a pop up that indicates you that you're not allowed to use more than 2 screens at the same time.
 
-A few resources to get you started if this is your first Flutter project:
+This project uses Firebare authentication, Firebase Realtime Database and Bloc for the state managment. 
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+You can check the commit [Add screen limit](https://github.com/Cteq3132/screen-limit/commit/fa5b4c2110ec9f5569cc0e126aa78e03eb28a1c7) to see the lines to add for this feature from an app with an authentication feature (here done with bloc and firebase) [Basic app with auth](https://github.com/Cteq3132/screen-limit/commit/e3bc221d98e00d465475cb473fd4323fea19581f).
